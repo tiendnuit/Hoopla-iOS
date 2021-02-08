@@ -23,6 +23,25 @@ Using MVVM-C pattern gives us some benefits like code reuse, ease of testing, bi
 And splitting off protocols (DataSource and Delegate) into separate objects we can re-use those objects in other view controllers, or use different objects in the same view controller to get different behavior at runtime.
 <a href="https://drive.google.com/uc?export=view&id=1qrEkNSqrtW3So7ySrn9P_S2mgBdWWFNu"><img src="https://drive.google.com/uc?export=view&id=1qrEkNSqrtW3So7ySrn9P_S2mgBdWWFNu" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
+## Unit Test
+
+    func test_get_top_list_movies() throws {
+        //Given
+        let totalMovies = 2
+        
+        //When
+        var movies: [OverviewMovie]?
+        apiProvider.request(.topMovies) { (result: Result<[OverviewMovie], HooplaError>) in
+            if case let .success(items) = result {
+                movies = items
+            }
+        }
+        
+        //Then
+        XCTAssert(movies != nil)
+        XCTAssert(movies?.count == totalMovies)
+    }
+    
 ## Next Features
 - Make UI with SwiftUI
 

@@ -26,5 +26,8 @@ And splitting off protocols (DataSource and Delegate) into separate objects we c
 ## Next Features
 - Make UI with SwiftUI
 
+## Screenshot
+<a href="https://drive.google.com/uc?export=view&id=12xUGDegSaBNLz_l2Gu_EdnucDE2iJ_zZ"><img src="https://drive.google.com/uc?export=view&id=12xUGDegSaBNLz_l2Gu_EdnucDE2iJ_zZ" style="width: 650px; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
 ## Author
 Tommy Doan, [tiendnuit@gmail.com](mailto:tiendnuit@gmail.com) or [tommy.doan2710@gmail.com](mailto:tommy.doan2710@gmail.com)
